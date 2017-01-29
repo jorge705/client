@@ -48,9 +48,14 @@ export default {
 </script>
 <style scoped>
 .basic {
-  font-size: 1.5em;
+  font-size: 1em;
   border-bottom: solid;
-  border-top: solid;
-  border-size: 1px;
+  border-width: thin;
+  border-bottom-color: #C3C3C3;
+   
+}
+.advanced .pure-g {
+    text-align: left;
+    font-size: 1em;
 }
 </style>

@@ -24,4 +24,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="~6.0.0" />
+    <plugin name="cordova-plugin-nativestorage" spec="~2.2.0" />
 </widget>

@@ -9,7 +9,14 @@
 </template>
 <script>
 import NetworkNode from './NetworkNode';
-// import NetworkService from '../services/NetworkService';
+import NetworkService from '../services/NetworkService';
+
+let network = [];
+function updateNetwork() {
+  NetworkService.getHosts().then((result) => { network = JSON.parse(result); });
+}
+
+setInterval(updateNetwork, 5000);
 
 export default {
   name: 'networkRadar',
@@ -18,10 +25,7 @@ export default {
   },
   data() {
     return {
-      network: [ // TODO retrieve with NetworkService.js
-        { ip_addr: '127.0.0.1', hw_addr: 'aa:bb:cc:dd', first_seen: new Date(), last_seen: new Date(), name: 'localhost' },
-        { ip_addr: '192.168.1.1', hw_addr: 'aa:bb:cc:de', first_seen: new Date(), last_seen: new Date(), name: 'router' },
-      ],
+      network,
     };
   },
 };
