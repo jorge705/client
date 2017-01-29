@@ -20,6 +20,9 @@ addons:
 
 notifications:
   email: false
+  slack:
+    rooms:
+      - csploit:BYr15dcnal0Dm6UZRafBqWSC#travis
 
 branches:
   only:
